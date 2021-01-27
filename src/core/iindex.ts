@@ -1,9 +1,7 @@
-export {plugins} from './plugins'
+import {plugins} from './plugins'
+import {services} from './service'
 
-// export const core
-// export * as service from './service'
-// import plugins from './plugins'
-
-const core = {}
-
-export default core
+export {
+  plugins,
+  services
+}
