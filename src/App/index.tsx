@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import * as esbuild from 'esbuild-wasm'
-// import core from '../core'
-import './App.css';
+import { plugins } from '../core'
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
     startService()
   }, [])
 
-  const handleInput: (e: React.ChangeEvent<HTMLTextAreaElement>) => void = (e) => {
+  const handleInput = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     (inputHandler(e.target.value))
   }
 
@@ -35,10 +34,10 @@ function App() {
       entryPoints: ['index.js'],
       bundle: true,
       write: false,
-      plugins: []
+      plugins: [plugins.unpkgPathPlugin()]
     })
 
-    codeHandler(result.code)
+    codeHandler(result.outputFiles[0].text)
   }
 
   return (

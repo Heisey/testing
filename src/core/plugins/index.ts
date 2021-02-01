@@ -1,6 +1,7 @@
 import unpkgPathPlugin from './unpkgPath'
 
-export const plugins = {
+const plugins = {
   unpkgPathPlugin
 }
 
+export default plugins

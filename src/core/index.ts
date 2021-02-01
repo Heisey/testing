@@ -1,7 +1,2 @@
-import {plugins} from './plugins'
-import {services} from './service'
-
-export {
-  plugins,
-  services
-}
+export { default as plugins } from './plugins'
+export { default as services } from './service'

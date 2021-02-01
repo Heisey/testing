@@ -1,5 +1,7 @@
 import { reportWebVitals } from './reportWebVitals'
 
-export const services = {
+const services = {
   reportWebVitals
 }
+
+export default services
